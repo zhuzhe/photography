@@ -4,7 +4,8 @@ Photography::Application.routes.draw do
   match 'contact' => 'welcome#contact', :as => :contact 
   resources :photos do
      member do
-        get 'next'
+        get 'next' 
+        get 'prev'
      end
   end
   resources :weddings

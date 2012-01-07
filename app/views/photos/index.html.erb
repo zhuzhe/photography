@@ -4,7 +4,9 @@
 		<%= javascript_include_tag 'jquery-1.3.2'%>
 		<%= javascript_include_tag 'gallery'%>
 	</head>
-	<body>
+	<body>         
+		<%= hidden_field_tag :first_photo_id, @first_photo.id %>
+		<%= hidden_field_tag :first_photo_url, @first_photo.id2relative_path%>
 		<div class="gallery">
 			<div class="slide"> 
 				<%=image_tag '/images/photos/2222.jpg'%>

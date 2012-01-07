@@ -15,7 +15,7 @@ body {
 .prev {
 	position: absolute;  
 	width: 300px;    
-	height: 300px;
+	height: 100%;
 	top: 0;
 	left: 0;   
 	z-index: 1000;
@@ -23,7 +23,8 @@ body {
 	font-size: 100px;    
 	color: white;
 	padding: 300px 0 0 0;  
-	cursor: pointer;
+	cursor: pointer;    
+	opacity: 0.3;
 }   
 
 .prev span {
@@ -33,7 +34,7 @@ body {
 .next {
 	position: absolute;  
 	width: 300px;    
-	height: 300px;
+	height: 100%;
 	top: 0;
 	right: 0;   
 	z-index: 1000;
@@ -41,7 +42,8 @@ body {
 	font-size: 100px;      
 	color: white;
 	padding: 300px 0 0 0;   
-	cursor: pointer;
+	cursor: pointer;   
+	opacity: 0.3;
 }                       
 
 .next span {

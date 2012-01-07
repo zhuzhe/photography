@@ -21,11 +21,24 @@ namespace :photo do
          if f.to_s.match(/\.JPG/)         
              puts f.to_s
              image = MiniMagick::Image.open(f.to_s) 
-             image.resize "800x600"
-             image.write "/Users/zhuzhe/Desktop/images/#{index + 1}.jpg"
-             return
-         end
+             image.resize "1000x1000"
+             image.write "/Users/zhuzhe/Desktop/photos/#{index + 1}.jpg" 
+             index = index + 1
+         end  
        end 
+    end
+    
+    task :store  => :environment do
+        root = "/Users/zhuzhe/Desktop/photos"
+        Dir.foreach(root) do |filename|    
+            f = File.new("#{root}/#{filename}")  
+            next if File.directory? f
+            photo = Photo.create                 
+            path = "#{photo.id2(Pathname.new("/Users/zhuzhe/Pictures/photos"))}.jpg" 
+            image = MiniMagick::Image.open(f.path)
+            image.write path
+            puts path
+        end
     end
 end
 

@@ -18,9 +18,18 @@ class PhotosController < ApplicationController
     end
   end   
   
-  def next
-    render :json => 'success'
+  def next            
+    @photo = Photo.find(params[:id])
+    @next_photo = @photo.next
+    render :json => {:id => @next_photo.id, :url => @next_photo.id2relative_path } 
+  end       
+  
+  def prev            
+    @photo = Photo.find(params[:id])
+    @prev_photo = @photo.prev
+    render :json => {:id => @prev_photo.id, :url => @prev_photo.id2relative_path } 
   end
+  
 
   # GET /photos/new
   # GET /photos/new.xml
