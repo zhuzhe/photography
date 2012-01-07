@@ -1,0 +1,22 @@
+html, body {
+	margin:0;
+	padding:0;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+}
+pre {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	overflow-x: auto;
+}
+div#page {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: left;
+}
+div#container {
+	padding: 20px 20px 0px;
+}
+div#ads {
+	clear: both;
+	padding: 12px 0 12px 66px;
+}

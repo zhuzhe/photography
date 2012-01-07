@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul{
+	margin:0px;
+	padding:0px;
+}
+li{list-style:none;
+}
+a{
+	cursor:pointer;
+	text-decoration:none;
+}
+p{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	font-size:12px;
+	background:url(../images/bg.gif);
+	margin:0px;
+}
+#wrap{
+	width:100%;
+	height:100%;
+}
+#wrap .header{
+	width:1024px;
+	height:118px;
+	margin:0 auto;
+	background:url(../images/top.gif) no-repeat;
+}
+#wrap .nav{
+	min-width:1024px;
+	width:100%;
+	height:51px;
+	margin:0 auto;
+	background:url(../images/nav_bg.gif) no-repeat;
+}
+#wrap .nav .span{
+	padding:17px 0px 0px;
+	height:17px;
+}
+#wrap .nav .span a{
+	background:none;
+	height:17px;
+}
+#wrap .nav .span a:hover{
+	background:none;
+	height:17px;
+}
+#wrap .nav ul{
+	width:1024px;
+	height:50px;
+	margin:0 auto;
+	font-size:14px;
+	background:url(../images/ul_bg.gif) no-repeat;
+}
+#wrap .nav ul li{
+	float:left;
+	width:78px;
+	height:36px;
+	padding:7px 16px;
+}
+#wrap .nav ul li a{
+	width:78px;
+	height:36px;
+	float:left;
+	color:#FFF;
+	line-height:38px;
+	text-align:center;
+}
+#wrap .nav ul li a:hover{
+	background:url(../images/nav_hover.gif) no-repeat;
+	color:#890000;
+}
+#wrap .nav .hover{
+	background:url(../images/nav_hover.gif) no-repeat;
+	color:#890000;
+}
+#wrap .content{
+	width:1024px;
+	height:100%;
+	margin:12px auto;
+	overflow:hidden;
+}
+#wrap .index{
+	width:1224px;
+	height:774px;
+	padding:40px;
+	margin:10px auto;
+	background:url(../images/index_bg.gif) no-repeat;
+}
+#wrap .index .main{
+	width:1220px;
+	height:770px;
+	border:#FFF solid 2px;
+}
+#wrap .footer{
+	clear:both;
+	min-width:1024px;
+	width:100%;
+	height:224px;
+	padding-top:50px;
+}
+#wrap .footer .yue{
+	background:url(../images/yue.gif) no-repeat;
+	margin:0 auto;
+	width:1024px;
+	height:36px;
+}
+#wrap .footer .more{
+	background:url(../images/footer.gif) no-repeat;
+	width:100%;
+	height:130px;
+	padding-top:22px;
+}
+#wrap .footer .more .phone{
+	padding-bottom:10px;
+}
+#wrap .footer .more ul li{
+	color:#FFF;
+	font-size:12px;
+	line-height:18px;
+	padding-left:780px;
+}
+
+#wrap .footer .backToTop {
+ width: 63px;
+ height:29px;
+ margin:10px auto 0px;
+ padding-left:900px;
+}

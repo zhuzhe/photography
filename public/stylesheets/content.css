@@ -1,0 +1,253 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+h2,h3,h4{
+	margin:0px;
+	padding:0px;
+}
+
+/*品牌理念页面css*/
+#wrap .content .right .brand_concept{
+	background:url(../images/content/yue_pic.gif) no-repeat;
+	padding-left:26px;
+	height:24px;
+	line-height:20px;
+	color:#890000;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:#890000 1px solid;
+}
+#wrap .content .right .title{
+	width:207px;
+	height:80px;
+	margin:20px auto;
+}
+#wrap .content .right .container{
+	padding:0px 20px;
+}
+#wrap .content .right .container ul{
+}
+#wrap .content .right .container li{
+	text-indent:2em;
+	color:#a7804a;
+	line-height:24px;
+	font-size:14px;
+	padding:10px 0px;
+}
+#wrap .content .right .container li img{
+	vertical-align:text-bottom;
+	padding-right:5px;
+}
+#wrap .content .right .container li a{
+	font-weight:bold;
+}
+#wrap .content .right .container p{
+	color:#890000;
+	font-size:14px;
+	padding-left:50px;
+	padding-top:30px;
+}
+
+/*经典作品页面css*/
+#wrap .content .banner{
+	background:url(../images/content/works_banner.gif) no-repeat;
+	width:822px;
+	height:334px;
+	padding:3px 101px;
+}
+#wrap .content .works{
+	background:url(../images/content/works.gif) no-repeat;
+	width:1024px;
+	height:652px;
+	padding-top:55px;
+	margin-top:20px;
+}
+#wrap .content .left{
+	width:180px;
+	height:100%;
+	float:left;
+}
+#wrap .content .left h2 img{
+	padding:0px;
+}
+#wrap .content .left ul{
+	padding-bottom:16px;
+}
+#wrap .content .left ul li{
+	line-height:28px;
+	margin:0 auto;
+	height:28px;
+	width:176px;
+	color:#565656;
+	border-bottom:#b65353 dashed 1px;
+}
+#wrap .content .left ul li a{
+	background:url(../images/content/left_a.gif) no-repeat;
+	padding-left:40px;
+	float:left;
+}
+#wrap .content .left ul li a:hover{
+	background:url(../images/content/left_hover.gif) no-repeat;
+	color:#FFF;
+	width:138px;
+}
+#wrap .content .left .hover{
+	background:url(../images/content/left_hover.gif) no-repeat;
+	color:#FFF;
+	width:138px;
+}
+#wrap .content .left img{
+	border:0;
+	padding-top:10px;
+}
+#wrap .content .right{
+	padding-left:34px;
+	padding-top:16px;
+	width:810px;
+	height:100%;
+	float:left;
+}
+#wrap .content .right h3{
+	background:url(../images/content/wedding_pic.gif) no-repeat;
+	padding-left:26px;
+	height:24px;
+	line-height:20px;
+	color:#890000;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:#890000 1px solid;
+}
+#wrap .content .right .example{
+	padding-top:8px;
+}
+#wrap .content .right .example span{
+	float:left;
+	background:#e3d8bf;
+	width:170px;
+	height:114px;
+	padding:3px;
+	margin:12px;
+}
+#wrap .content .right .example span img{
+	border:#FFF 1px solid;
+}
+#wrap .content .right .main{
+	width:744px;
+	padding-left:56px;
+	line-height:24px;
+}
+#wrap .content .right .main ul{
+	padding-top:12px;
+	padding-left:16px;
+	width:738px;
+	clear:both;
+}
+#wrap .content .right .main img{
+	padding-bottom:20px;
+}
+#wrap .content .right .main h4{
+	width:80px;
+	float:left;
+	font-size:14px;
+	color:#a7804a;
+}
+#wrap .content .right .main .tips{
+	color:#cb2f07;
+}
+#wrap .content .right .main ul li{
+	color:#a7804a;
+	font-size:14px;
+	width:590px;
+	float:left;
+}
+#wrap .content .right .main ul li p{
+	padding:0px 0px 0px 40px;
+	color:#a7804a;
+	line-height:24px;
+}
+
+/*艺术写真页面css*/
+#wrap .content .right .art{
+	background:url(../images/content/art_pic.gif) no-repeat;
+	padding-left:26px;
+	height:24px;
+	line-height:20px;
+	color:#890000;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:#890000 1px solid;
+}
+#wrap .content .right .main p{
+	clear:both;
+	color:#5a5a5a;
+	line-height:18px;
+}
+
+/*在线留言页面css*/
+#wrap .content .right .main .option{
+	width:80px;
+	text-align:right;
+	float:left;
+}
+#wrap .content .right .main .option li{
+	width:80px;
+	text-align:right;
+	line-height:24px;
+	height:24px;
+	_line-height:26px;
+	_height:26px;
+	padding-top:10px;
+}
+#wrap .content .right .main .text{
+	width:600px;
+	float:left;
+	clear:none;
+	padding-left:0px;
+}
+
+#wrap .content .right .main .text li{
+	width:600px;
+	padding-top:10px;
+	line-height:24px;
+	height:24px;
+}
+#wrap .content .right .main .text li input{
+	width:166px;
+	height:20px;
+	border:#aa8450 solid 1px;
+	background:#FFF;
+	line-height:20px;
+	vertical-align:middle;
+}
+#wrap .content .right .main .text li  textarea{
+	width:598px;
+	height:182px;
+	background:url(../images/content/textarea.gif) no-repeat;
+	border:#aa8450 solid 1px;
+	line-height:24px;
+	vertical-align:middle;
+}
+/*经典作品页面banner图片*/
+#imgPlay {
+	MARGIN: 0px auto;
+	OVERFLOW: hidden;
+	WIDTH: 820px;
+	ZOOM: 1;
+	HEIGHT: 332px;
+	position:relative;
+	border:#FFF solid 1px;
+}
+#imgPlay .imgs IMG {
+	WIDTH: 820px;
+	height:332px;
+}
+#imgPlay .imgs LI {
+	FLOAT: left;
+	list-style:none;
+	width:820px;
+	height:322px;
+}
+#imgPlay .imgs {
+	WIDTH: 5760px
+}
