@@ -1,4 +1,19 @@
 Photography::Application.routes.draw do
+  get "photos/index"
+
+  get "photos/new"
+
+  get "photos/create"
+
+  get "photos/update"
+
+  get "photos/destroy"
+
+  namespace :admin do resources :users end
+
+  namespace :admin do resources :productions end
+  namespace :admin do resource :session end
+
   match 'brand' => 'welcome#brand', :as => :brand  
   match 'team' => 'welcome#team', :as => :team
   match 'contact' => 'welcome#contact', :as => :contact 
@@ -60,6 +75,7 @@ Photography::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  match 'admin' => 'admin/welcome#index', :as => :admin
   root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
