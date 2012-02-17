@@ -1,0 +1,57 @@
+<%= form_for(@admin_production) do |f| %>
+  <% if @admin_production.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_production.errors.count, "error") %> prohibited this admin_production from being saved:</h2>
+
+      <ul>
+      <% @admin_production.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.select :category, [['art', 1], ['wedding', 2]] %>
+  </div>
+  <div class="field">
+    <%= f.label :clothing %><br />
+    <%= f.text_area :clothing %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.text_area :time %>
+  </div>
+  <div class="field">
+    <%= f.label :makeup %><br />
+    <%= f.text_area :makeup %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_area :place %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br />
+    <%= f.text_area :service %>
+  </div>
+  <div class="field">
+    <%= f.label :photos %><br />
+    <%= f.text_area :photos %>
+  </div>
+  <div class="field">
+    <%= f.label :gift %><br />
+    <%= f.text_area :gift %>
+  </div>
+   <div class="field">
+    <%= f.label :tip %><br />
+    <%= f.text_area :tip %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

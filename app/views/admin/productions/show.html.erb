@@ -1,0 +1,52 @@
+<div>
+	<%= link_to  'productions',admin_productions_path%> > @admin_production.name
+</div>
+
+<%= link_to 'Edit', edit_admin_production_path(@admin_production) %> |
+<%= link_to 'Destroy', @admin_production, :confirm => 'Are you sure?', :method => :delete %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_production.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @admin_production.category %>
+</p>
+
+<p>
+  <b>Clothing:</b>
+  <%= @admin_production.clothing %>
+</p>
+<p>
+  <b>time:</b>
+  <%= @admin_production.time %>
+</p>
+<p>
+  <b>makeup:</b>
+  <%= @admin_production.makeup %>
+</p>
+<p>
+  <b>place:</b>
+  <%= @admin_production.place %>
+</p>
+<p>
+  <b>service:</b>
+  <%= @admin_production.service %>
+</p>
+<p>
+  <b>photos:</b>
+  <%= @admin_production.photos %>
+</p>
+<p>
+  <b>gift:</b>
+  <%= @admin_production.gift %>
+</p>
+<p>
+  <b>tip:</b>
+  <%= @admin_production.tip %>
+</p>
+
+
