@@ -22,20 +22,18 @@ body{
 	margin:0px;
 }
 #wrap{
-	width:100%;
+	width:1024px;
+	margin:0 auto;
 	height:100%;
 }
 #wrap .header{
 	width:1024px;
 	height:118px;
-	margin:0 auto;
 	background:url(../images/top.gif) no-repeat;
 }
 #wrap .nav{
-	min-width:1024px;
-	width:100%;
-	height:51px;
-	margin:0 auto;
+	width:1024px;
+	height:52px;
 	background:url(../images/nav_bg.gif) no-repeat;
 }
 #wrap .nav .span{
@@ -51,17 +49,16 @@ body{
 	height:17px;
 }
 #wrap .nav ul{
-	width:1024px;
-	height:50px;
-	margin:0 auto;
+	width:1013px;
+	height:52px;
 	font-size:14px;
-	background:url(../images/ul_bg.gif) no-repeat;
+	padding-left:11px;
 }
 #wrap .nav ul li{
 	float:left;
 	width:78px;
 	height:36px;
-	padding:7px 16px;
+	padding:8px 16px;
 }
 #wrap .nav ul li a{
 	width:78px;
@@ -99,8 +96,7 @@ body{
 }
 #wrap .footer{
 	clear:both;
-	min-width:1024px;
-	width:100%;
+	width:1024px;
 	height:224px;
 	padding-top:50px;
 }
@@ -119,16 +115,19 @@ body{
 #wrap .footer .more .phone{
 	padding-bottom:10px;
 }
+#wrap .footer .more ul{
+	float:left;
+}
 #wrap .footer .more ul li{
 	color:#FFF;
 	font-size:12px;
 	line-height:18px;
-	padding-left:780px;
 }
-
+#wrap .footer .more ul li a img{
+	margin-top:10px;
+}
 #wrap .footer .backToTop {
  width: 63px;
  height:29px;
  margin:10px auto 0px;
- padding-left:900px;
 }

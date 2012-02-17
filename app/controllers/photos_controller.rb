@@ -2,9 +2,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-    @photos = Photo.all   
-    @first_photo = @photos.first
-    render :layout => false
+
   end
 
   # GET /photos/1

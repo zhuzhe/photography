@@ -49,7 +49,7 @@ h2,h3,h4{
 	padding-top:30px;
 }
 
-/*经典作品页面css*/
+/*首页css*/
 #wrap .content .banner{
 	background:url(../images/content/works_banner.gif) no-repeat;
 	width:822px;
@@ -222,7 +222,7 @@ h2,h3,h4{
 }
 #wrap .content .right .main .text li  textarea{
 	width:598px;
-	height:182px;
+	height:154px;
 	background:url(../images/content/textarea.gif) no-repeat;
 	border:#aa8450 solid 1px;
 	line-height:24px;
@@ -250,4 +250,31 @@ h2,h3,h4{
 }
 #imgPlay .imgs {
 	WIDTH: 5760px
+}
+
+/*经典作品页css*/
+#wrap .content .left ul li a span{
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+#wrap .content .right .work{
+	padding-top:8px;
+}
+#wrap .content .right .work ul li{
+	list-style:none;
+	float:left;
+	text-align:center;
+}
+#wrap .content .right .work ul li a{
+	display:block;
+	background:url(../images/works/bg.jpg) no-repeat;
+	width:168px;
+	height:112px;
+	padding:1px;
+	margin:12px;
+	border:#c0b395 1px solid;
+}
+#wrap .content .right .work ul li a:hover{
+	border:1px solid #eda6a6;
 }
