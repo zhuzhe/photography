@@ -25,7 +25,8 @@ Photography::Application.routes.draw do
   end
   resources :weddings
   resources :arts   
-  resources :messages
+  resources :messages    
+  resources :productions
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

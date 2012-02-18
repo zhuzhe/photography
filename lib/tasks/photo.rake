@@ -39,6 +39,16 @@ namespace :photo do
             image.write path
             puts path
         end
+    end   
+    
+    task :change => :environment do
+         root = Rails.root.join('public', 'images', 'photos')
+            traverse_dir(root.to_s) do |f| 
+                image = MiniMagick::Image.open(f.to_s)  
+                image.resize "560x560"
+                image.write f.to_s
+                puts f.to_s
+            end
     end
 end
 

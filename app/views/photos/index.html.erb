@@ -2,42 +2,21 @@
 		<div class="left">
 			<h2><img src="images/content/wedding_title.gif" /></h2>
 			<ul>
-				<li><a><span>2006</span> 经典</a></li>
-				<li><a><span>2007</span> 经典</a></li>
-				<li><a><span>2008</span> 经典</a></li>
-				<li><a><span>2009</span> 经典</a></li>
-				<li><a class="hover"><span>2010</span> 经典</a></li>
-				<li><a><span>2011</span> 经典</a></li>
-				<li><a><span>2012</span> 经典</a></li>
+				<li><a>写真套系</a></li>
+				<li><a>经典婚纱</a></li>
+				<li><a>客套经典</a></li>   
 			</ul>
 			<img src="images/content/service.gif" />
 			<img src="images/pic/ad_01.jpg" />
 			<img src="images/pic/contact.jpg" />
 		</div>
 		<div class="right">
-			<h3>2006 经典</h3>
+			<h3> 经典</h3>
 			<div class="work">
-				<ul>
-					<li><a><img src="images/works/pic_01.jpg" /></a></li>
-					<li><a><img src="images/works/pic_02.jpg" /></a></li>
-					<li><a><img src="images/works/pic_03.jpg" /></a></li>
-					<li><a><img src="images/works/pic_04.jpg" /></a></li>
-					<li><a><img src="images/works/pic_05.jpg" /></a></li>
-					<li><a><img src="images/works/pic_06.jpg" /></a></li>
-					<li><a><img src="images/works/pic_07.jpg" /></a></li>
-					<li><a><img src="images/works/pic_08.jpg" /></a></li>
-					<li><a><img src="images/works/pic_09.jpg" /></a></li>
-					<li><a><img src="images/works/pic_10.jpg" /></a></li>
-					<li><a><img src="images/works/pic_11.jpg" /></a></li>
-					<li><a><img src="images/works/pic_12.jpg" /></a></li>
-					<li><a><img src="images/works/pic_01.jpg" /></a></li>
-					<li><a><img src="images/works/pic_02.jpg" /></a></li>
-					<li><a><img src="images/works/pic_03.jpg" /></a></li>
-					<li><a><img src="images/works/pic_04.jpg" /></a></li>
-					<li><a><img src="images/works/pic_05.jpg" /></a></li>
-					<li><a><img src="images/works/pic_06.jpg" /></a></li>
-					<li><a><img src="images/works/pic_07.jpg" /></a></li>
-					<li><a><img src="images/works/pic_08.jpg" /></a></li>
+				<ul>     
+					<% @photos.each do |p|%>
+						<li><a><img src="<%= p.id2relative_path%>" width='168' height='112'/></a></li> 
+					<% end %>  
 				</ul>
 			</div>
 		</div>

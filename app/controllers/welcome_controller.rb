@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
-  def index
+  def index       
+      @photos = Photo.limit(30)
   end   
   
   def brand

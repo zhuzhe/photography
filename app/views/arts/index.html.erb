@@ -4,19 +4,20 @@
 	<div class="content">
 		<div class="left">
 			<h2><img src="images/content/art_title.gif" /></h2>
-			<ul>
-				<li><a>艺术写真 699套系</a></li>
-				<li><a>艺术写真 1099套系</a></li>
-				<li><a>艺术写真 4599套系</a></li>
-				<li><a>艺术写真 2599套系</a></li>
-				<li><a class="hover">艺术写真 3899套系</a></li>
+			<ul> 
+				<% @productions.each do |p| %>
+				  <li>                 
+					<%= link_to p.name, arts_path(:production_id => p.id) %>
+				  </li>
+				<% end %>   
 			</ul>
 			<img src="images/content/service.gif" />
 			<img src="images/pic/ad_01.jpg" />
 			<img src="images/pic/contact.jpg" />
 		</div>
 		<div class="right">
-			<h3 class="art">3899 套系</h3>
+			<% if  @production %>
+			<h3><%= @production.name%></h3>
 			<div class="example">
 				<span><img src="images/banner/pic_01.jpg" /></span>
 				<span><img src="images/banner/pic_02.jpg" /></span>
@@ -27,44 +28,39 @@
 				<img src="images/content/introduction.gif" />
 				<ul>
 					<h4>拍摄服装：</h4>
-					<li>自由挑选任意服装5套（也可自带），含室内1套</li>
+					<li><%= @production.clothing%></li>
 				</ul>
 				<ul>
 					<h4>化妆造型：</h4>
-					<li>私人造型师根据您的独特气质设计完美造型5款</li>
+					<li><%= @production.makeup%></li>
 				</ul>
 				<ul>
 					<h4>拍摄场景：</h4>
-					<li>独特风车外景拍摄+南诏风情岛外景+大理外景（私人摄影师专业推荐，也可自选）</li>
+					<li><%= @production.place%></li>
 				</ul>
 				<ul>
 					<h4>拍摄时间：</h4>
-					<li>全天专业打造</li>
+					<li><%= @production.time%></li>
 				</ul>
 				<ul>
 					<h4>特色服务：</h4>
-					<li>私人造型师，私人摄影师，私人灯光师，私人助理全程一对一感动服务</li>
+					<li><%= @production.service%></li>
 				</ul>
 				<ul>
 					<h4>所拍照片：</h4>
-					<li>拍摄高清数码底片150张，精致数码光碟一张，所拍底片全送(精调精修42张)</li>
+					<li><%= @production.photos%></li>
 				</ul>
 				<ul>
 					<h4>产品赠送：</h4>
 					<li>
-						<p>12X12寸最新印象册一本（入册20张）含封底封面</p>
-						<p>8X10寸时尚快易册一本（入册16张）含封底封面</p>
-						<p>40寸条形经典款一张</p>
-						<p>20寸美丽时尚组合-3（含3组照片）</p>
-						<p>10寸精美摆台一个</p>
-						<p>7寸精美摆台一个</p>
+						<%= @production.gift%>
 					</li>
 				</ul>
 				<ul>
-				<p>还有更多经典套系推荐，含唯美浪漫海景房，丽江外景，香格里拉外景等特色外景拍摄，如有需要请来电咨询</p>
-				<p>服务热线：13508726850  13312749322</p>
-				<p>QQ：370605998  2674555426  2399391969</p>
-				</ul>
+					<h4 class="tips">温馨提示：</h4>
+					<li><%= @production.tip%></li>
+				</ul> 
+				<% end %>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 class Photo < ActiveRecord::Base     
     
-    ROOT_DIR = Rails.root.join('public', 'images', 'cos', 'origin')
+    ROOT_DIR = Rails.root.join('public', 'images', 'photos')
     
     def id2path
       self.id2(ROOT_DIR) + '.jpg'

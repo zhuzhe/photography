@@ -1,4 +1,10 @@
-
+   <%= content_for :head do %>
+	<script type="text/javascript" charset="utf-8">
+		.image-wrapper {
+			overflow:hidden;
+		}
+	</script>>
+	<% end %>
 
 	<div class="content">
 		<div class="banner">
@@ -22,7 +28,7 @@
 					<div id="controls" class="controls"></div>
 					<div class="slideshow-container">
 						<div id="loading" class="loader"></div>
-						<div id="slideshow" class="slideshow"></div>
+						<div id="slideshow" class="slideshow" style='overflow: hidden'></div>
 						<div id="caption" class="caption-container"></div>
 					</div>
 					<div id="captionToggle">
@@ -30,268 +36,19 @@
 					</div>
 				</div>
 				<div id="thumbs" class="navigation">
-					<ul class="thumbs noscript">
-						<li>
-							<a class="thumb" name="leaf" href="pic/2222_9.JPG" title="Title #0">
-								<img src="pic/2222_9.JPG" alt="Title #0" />
+					<ul class="thumbs noscript"> 
+						<% @photos.each_with_index	do |p, index| %>          
+						 <li>
+							<a class="thumb" name="<%=index%>" href="<%= p.id2relative_path%>" title="Title #<%= index%>"> 
+								<%= image_tag p.id2relative_path%>   
 							</a>
 							<div class="caption">
-								<div class="image-title">Title #0</div>
+								<div class="image-title">Title #<%= index%></div>
 								<div class="image-desc">Description</div>
 							</div>
-						</li>
-
-						<li>
-							<a class="thumb" name="leaf" href="pic/2222.JPG" title="Title #0">
-								<img src="pic/2222.JPG" alt="Title #0" />
-							</a>
-							<div class="caption">
-								Any html can be placed here ...
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" name="bigleaf" href="pic/2222_14.JPG" title="Title #2">
-								<img src="pic/2222_14.JPG" alt="Title #2" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #2</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" name="pic/2222_1.jpg" title="Title #3">
-								<img src="pic/2222_1.jpg" alt="Title #3" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #3</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_2.jpg" title="Title #4">
-								<img src="pic/2222_2.jpg" alt="Title #4" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #4</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_3.jpg" title="Title #5">
-								<img src="pic/2222_3.jpg" alt="Title #5" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #5</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_5.jpg" title="Title #6">
-								<img src="pic/2222_5.jpg" alt="Title #6" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #6</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_7.jpg" title="Title #7">
-								<img src="pic/2222_7.jpg" alt="Title #7" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #7</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_6.jpg" title="Title #8">
-								<img src="pic/2222_6.jpg" alt="Title #8" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #8</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_8.jpg" title="Title #9">
-								<img src="pic/2222_8.jpg" alt="Title #9" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #9</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_10.jpg" title="Title #10">
-								<img src="pic/2222_10.jpg" alt="Title #10" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #10</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_11.jpg" title="Title #11">
-								<img src="pic/2222_11.jpg" alt="Title #11" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #11</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_12.jpg" title="Title #12">
-								<img src="pic/2222_12.jpg" alt="Title #12" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #12</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_13.jpg" title="Title #13">
-								<img src="pic/2222_13.jpg" alt="Title #13" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #13</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_14.jpg" title="Title #14">
-								<img src="pic/2222_14.jpg" alt="Title #14" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #14</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_15.jpg" title="Title #15">
-								<img src="pic/2222_15.jpg" alt="Title #15" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #15</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_16.jpg" title="Title #16">
-								<img src="pic/2222_16.jpg" alt="Title #16" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #16</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_17.jpg" title="Title #17">
-								<img src="pic/2222_17.jpg" alt="Title #17" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #17</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
+						</li> 
+					    <% end %>     
 						
-						<li>
-							<a class="thumb" href="pic/2222_14.jpg" title="Title #14">
-								<img src="pic/2222_14.jpg" alt="Title #14" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #14</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_15.jpg" title="Title #15">
-								<img src="pic/2222_15.jpg" alt="Title #15" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #15</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_16.jpg" title="Title #16">
-								<img src="pic/2222_16.jpg" alt="Title #16" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #16</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_17.jpg" title="Title #17">
-								<img src="pic/2222_17.jpg" alt="Title #17" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #17</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						
-						<li>
-							<a class="thumb" href="pic/2222_14.jpg" title="Title #14">
-								<img src="pic/2222_14.jpg" alt="Title #14" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #14</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_15.jpg" title="Title #15">
-								<img src="pic/2222_15.jpg" alt="Title #15" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #15</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_16.jpg" title="Title #16">
-								<img src="pic/2222_16.jpg" alt="Title #16" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #16</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
-							<a class="thumb" href="pic/2222_17.jpg" title="Title #17">
-								<img src="pic/2222_17.jpg" alt="Title #17" />
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #17</div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li>
-
-						<li>
 					</ul>
 				</div>
 				<!-- End Advanced Gallery Html Containers -->
