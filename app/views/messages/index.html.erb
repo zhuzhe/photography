@@ -22,15 +22,39 @@
 					<li>留言主题：</li>
 					<li>内容：</li>
 				</ul>
+				 <% form_for @message do |f| -%>  
 				<ul class="text">
-					<li><input name="" type="text" /></li>
-					<li><input name="" type="text" /></li>
-					<li><input name="" type="text" /></li>
-					<li><input name="" type="text" /></li>
-					<li><input name="" type="text" /></li>
-					<li><input name="" type="text" /></li>
-					<li><textarea name="" cols="" rows=""></textarea></li>
-				</ul>
+				   
+					   <li>   
+						   <%= f.text_field :name %>   
+						</li>
+						<li>
+						   <%= f.text_field :phone %> 
+						</li> 
+						   
+						<li>
+						   <%= f.text_field :qq %>    
+						</li>
+						<li>
+							<%= f.text_field :email %>
+						</li>
+						<li>
+							<%= f.text_field :address %> 
+						</li> 
+						<li>
+							<%= f.text_field :title%>
+						 </li>
+						<li>
+							<%= f.text_area :content %> 
+						</li> 
+						<li>
+							
+						</li>   
+				</ul>  
+				<div>     
+				<%= f.submit '提交'%>
+				</div>
+				<% end -%>  
 			</div>
 		</div>
 	</div>

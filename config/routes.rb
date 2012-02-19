@@ -12,7 +12,8 @@ Photography::Application.routes.draw do
   namespace :admin do resources :users end
 
   namespace :admin do resources :productions end
-  namespace :admin do resource :session end
+  namespace :admin do resource :session end   
+  namespace :admin do resources :messages end
 
   match 'brand' => 'welcome#brand', :as => :brand  
   match 'team' => 'welcome#team', :as => :team

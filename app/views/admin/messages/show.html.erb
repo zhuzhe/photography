@@ -1,0 +1,42 @@
+<div>
+	<%= link_to "messages", admin_messages_path %> > <%= @admin_message.title || '没主题' %>
+</div>
+ <div class="main">
+		<ul class="option">
+			<li>您的称呼：</li>
+			<li>联系电话：</li>
+			<li>QQ：</li>
+			<li>邮箱：</li>
+			<li>地址：</li>
+			<li>留言主题：</li>
+			<li>内容：</li>
+		</ul>
+		<ul class="text">
+		   
+			   <li>   
+				   <%= @admin_message.name %>   
+				</li>
+				<li>
+				   <%= @admin_message.phone %> 
+				</li> 
+				   
+				<li>
+				   <%= @admin_message.qq %>    
+				</li>
+				<li>
+					<%= @admin_message.email %>
+				</li>
+				<li>
+					<%= @admin_message.address %> 
+				</li> 
+				<li>
+					<%= @admin_message.title%>
+				 </li>
+				<li>
+					<%= @admin_message.content %> 
+				</li>    
+				<li>
+					<%= @admin_message.created_at.strftime("%Y/%m/%d") %>
+				</li>
+		</ul>
+	</div>
