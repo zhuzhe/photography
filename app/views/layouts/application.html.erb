@@ -5,7 +5,6 @@
   <%= stylesheet_link_tag 'frame'%>
   <%= stylesheet_link_tag 'content'%>
   <%= csrf_meta_tag %> 
-  <%= yield :head%>
   <script src="javascripts/jquery-zzjs.js" type=text/javascript></script>
 <script src="javascripts/imgPlay.js" type=text/javascript></script>
 <link rel="stylesheet" href="stylesheets/pic.css" type="text/css" />
@@ -13,7 +12,8 @@
 <script type="text/javascript" src="javascripts/jquery.history.js"></script>
 <script type="text/javascript" src="javascripts/jquery.galleriffic.js"></script>
 <script type="text/javascript" src="javascripts/jquery.opacityrollover.js"></script>
-<script type="text/javascript" src="javascripts/pic.js"></script> 
+  <%= yield :head%>
+
 </head>
 <body>
    	<div id="wrap">
