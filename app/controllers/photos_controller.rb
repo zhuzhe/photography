@@ -2,7 +2,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-    @photos = Photo.all
+    @photos = Photo.paginate(:page => params[:page], :per_page => 16)
   end
 
   # GET /photos/1

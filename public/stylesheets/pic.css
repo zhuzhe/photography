@@ -173,6 +173,7 @@ div.pagination span.ellipsis {
 }
 #captionToggle{
 	padding-right:40px;
+	display: none;
 }
 #captionToggle a {
 	float: right;

@@ -46,12 +46,12 @@
 					loadingContainerSel:       '#loading',
 					renderSSControls:          true,
 					renderNavControls:         true,
-					playLinkText:              'Play Slideshow',
-					pauseLinkText:             'Pause Slideshow',
-					prevLinkText:              '&lsaquo; Previous Photo',
-					nextLinkText:              'Next Photo &rsaquo;',
-					nextPageLinkText:          'Next &rsaquo;',
-					prevPageLinkText:          '&lsaquo; Prev',
+					playLinkText:              '播放',
+					pauseLinkText:             '暂停',
+					prevLinkText:              '&lsaquo; 上一张',
+					nextLinkText:              '下一张 &rsaquo;',
+					nextPageLinkText:          '上一页 &rsaquo;',
+					prevPageLinkText:          '&lsaquo; 下一页',
 					enableHistory:             true,
 					autoStart:                 false,
 					syncTransitions:           true,
@@ -117,7 +117,7 @@
 				$.historyInit(pageload, "advanced.html");
 
 				// set onlick event for buttons using the jQuery 1.3 live method
-				$("a[rel='history']").live('click', function() {
+				$("a[rel='history']").live('click', function(e) {
 					if (e.button != 0) return true;
 
 					var hash = this.href;
