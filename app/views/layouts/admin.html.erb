@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Photography</title>
+  <meta charset="utf-8">
+  <title>Photography Admin</title>
   <%= csrf_meta_tag %> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le styles -->
+  <%= stylesheet_link_tag 'bootstrap', :cache => true %>
+  <%= stylesheet_link_tag 'bootstrap-responsive', :cache => true %>
+  <style>
+    body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+  </style>
   <%= yield :head%>
-   
 </head>
 <body>
+  <%= render :partial => 'admin/share/header'%>
 	<%= yield %>
 </body>
 </html>

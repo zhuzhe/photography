@@ -1,57 +1,81 @@
-<%= form_for(@admin_production) do |f| %>
-  <% if @admin_production.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_production.errors.count, "error") %> prohibited this admin_production from being saved:</h2>
+<%= form_for(@admin_production, :html => {:class => 'form-horizontal'}) do |f| %>
 
-      <ul>
-      <% @admin_production.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <fieldset>
+  <legend>填写产品信息</legend>
+    <% if @admin_production.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@admin_production.errors.count, "error") %> prohibited this admin_production from being saved:</h2>
+
+        <ul>
+        <% @admin_production.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_field :name, :class => 'input-xlarge'%>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.select :category, [['art', 1], ['wedding', 2]] %>
-  </div>
-  <div class="field">
-    <%= f.label :clothing %><br />
-    <%= f.text_area :clothing %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br />
-    <%= f.text_area :time %>
-  </div>
-  <div class="field">
-    <%= f.label :makeup %><br />
-    <%= f.text_area :makeup %>
-  </div>
-  <div class="field">
-    <%= f.label :place %><br />
-    <%= f.text_area :place %>
-  </div>
-  <div class="field">
-    <%= f.label :service %><br />
-    <%= f.text_area :service %>
-  </div>
-  <div class="field">
-    <%= f.label :photos %><br />
-    <%= f.text_area :photos %>
-  </div>
-  <div class="field">
-    <%= f.label :gift %><br />
-    <%= f.text_area :gift %>
-  </div>
-   <div class="field">
-    <%= f.label :tip %><br />
-    <%= f.text_area :tip %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%= f.select :category, [['艺术照', 1], ['婚纱照', 2]], :class => 'input-xlarge' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :clothing, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :time, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :makeup, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :place, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :service, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :photos, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :gift, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%=f.text_area :tip, :class => 'input-xlarge', :rows => 3%>
+      </div>
+    </div>
+    <div class='form-actions'>
+      <button class='btn btn-primary' type='submit'>保存</button>
+    </div>
+  </fieldset>
+</form>
+<% end -%>

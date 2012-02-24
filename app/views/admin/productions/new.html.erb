@@ -1,4 +1,18 @@
-<h1>New admin_production</h1>
+<ul class="breadcrumb">
+<li>
+	<%= link_to "首页", admin_path %>
+	<span class="divider">/</span>
+</li>
+<li>
+	<%= link_to "产品", admin_productions_path%>
+	<span class="divider">/</span>
+</li>
+<li class='active'>
+	<%= link_to "添加新产品", '#'%>
+</li>
+</ul>
+
+
 
 <%= render 'form' %>
 
