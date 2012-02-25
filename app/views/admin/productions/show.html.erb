@@ -1,52 +1,83 @@
-<div>
-	<%= link_to  'productions',admin_productions_path%> > @admin_production.name
+<ul class="breadcrumb">
+  <li>
+    <%= link_to "首页", admin_path %>
+    <span class="divider">/</span>
+  </li>
+  <li>
+    <%= link_to "产品", admin_productions_path%>
+    <span class="divider">/</span>
+  </li>
+  <li  class='active'>
+    <%= link_to @admin_production.name, '#' %>
+  </li>
+</ul>
+<div class='page-header'>
+  <h1><%= @admin_production.name%></h1>
 </div>
-
-<%= link_to 'Edit', edit_admin_production_path(@admin_production) %> |
-<%= link_to 'Destroy', @admin_production, :confirm => 'Are you sure?', :method => :delete %>
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @admin_production.name %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= @admin_production.category %>
-</p>
-
-<p>
-  <b>Clothing:</b>
-  <%= @admin_production.clothing %>
-</p>
-<p>
-  <b>time:</b>
-  <%= @admin_production.time %>
-</p>
-<p>
-  <b>makeup:</b>
-  <%= @admin_production.makeup %>
-</p>
-<p>
-  <b>place:</b>
-  <%= @admin_production.place %>
-</p>
-<p>
-  <b>service:</b>
-  <%= @admin_production.service %>
-</p>
-<p>
-  <b>photos:</b>
-  <%= @admin_production.photos %>
-</p>
-<p>
-  <b>gift:</b>
-  <%= @admin_production.gift %>
-</p>
-<p>
-  <b>tip:</b>
-  <%= @admin_production.tip %>
-</p>
+<div class="btn-group" style ='padding:0 0  20px 15px;'>
+  <%= link_to edit_admin_production_path(@admin_production), 
+  :class => 'btn btn-primary' do %>
+    <i class='icon-pencil icon-white'></i> 编辑
+  <% end -%>
+  <%= link_to @admin_production,
+   :class => 'btn btn-danger',
+   :confirm => '确定要删除此产品么?', :method => :delete do %>
+   <i class='icon-trash icon-white'></i> 删除
+  <% end -%>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>类型</h2>
+        <p><%= @admin_production.category_text%></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>服装</h2>
+        <p><%= @admin_production.clothing %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>时间</h2>
+        <p><%= @admin_production.time %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>化妆</h2>
+        <p><%= @admin_production.makeup %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>场景</h2>
+        <p><%= @admin_production.place %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>服务</h2>
+        <p><%= @admin_production.service %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>照片</h2>
+        <p><%= @admin_production.photos %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>赠品</h2>
+        <p><%= @admin_production.gift %></p>
+      </div>
+</div>
+<div class='row'>
+      <div class='span12'>
+        <h2>提示</h2>
+        <p><%= @admin_production.tip %></p>
+      </div>
+</div>
 
 
