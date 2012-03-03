@@ -3,19 +3,19 @@ class Admin::PhotosController < AdminController
   layout 'admin'
 
   def index
-    @photos = Admin::Photo.paginate(:per_page => 20, :page => params[:page])
+    @photos = Photo.paginate(:per_page => 20, :page => params[:page])
   end
 
   def show
-    @photo= Admin::Photo.find(params[:id])
+    @photo= Photo.find(params[:id])
   end
 
   def edit
-    @photo= Admin::Photo.find(params[:id])
+    @photo= Photo.find(params[:id])
   end
 
   def new
-    @photo= Admin::Photo.new
+    @photo= Photo.new
   end
 
   def create
@@ -29,13 +29,13 @@ class Admin::PhotosController < AdminController
   end
 
   def update
-    @photo = Admin::Photo.find(params[:id])
+    @photo = Photo.find(params[:id])
     @photo.update_attributes(params[:photo])
     render :json => {:status => 'success', :category => @photo.category_text}
   end
 
   def destroy
-    @photo = Admin::Photo.find(params[:id])
+    @photo = Photo.find(params[:id])
     @photo.destroy
     redirect_to admin_photos_path
   end
