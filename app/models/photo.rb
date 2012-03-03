@@ -1,6 +1,16 @@
 class Photo < ActiveRecord::Base     
     
     ROOT_DIR = Rails.root.join('public', 'images', 'photos')
+
+
+    def category_text
+      case self.category_id
+      when 1
+         then  "婚纱照"
+        when 2
+           then  "艺术照"  
+      end
+    end
     
     def id2path
       self.id2(ROOT_DIR) + '.jpg'
@@ -33,5 +43,11 @@ class Photo < ActiveRecord::Base
         else
             Photo.last
         end
+    end
+
+    def create_image
+      image = MiniMagick::Image.open(self.id2path)
+      image.resize "560x560"
+      image.write self.id2path
     end
 end

@@ -1,19 +1,13 @@
 Photography::Application.routes.draw do
-  get "photos/index"
-
-  get "photos/new"
-
-  get "photos/create"
-
-  get "photos/update"
-
-  get "photos/destroy"
 
   namespace :admin do resources :users end
 
   namespace :admin do resources :productions end
   namespace :admin do resource :session end   
   namespace :admin do resources :messages end
+  namespace :admin do resources :photos end
+
+  match '/admin/photos/:id/update' => 'admin/photos#update'
 
   match 'brand' => 'welcome#brand', :as => :brand  
   match 'team' => 'welcome#team', :as => :team

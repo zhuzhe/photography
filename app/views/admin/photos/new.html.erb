@@ -1,2 +1,38 @@
-<h1>Admin::Photos#new</h1>
-<p>Find me in app/views/admin/photos/new.html.erb</p>
+<ul class="breadcrumb">
+	<li>
+		<%= link_to "首页", admin_path %>
+		<span class="divider">/</span>
+	</li>
+	<li>
+		<%= link_to "相册", admin_photos_path%>
+		<span class="divider">/</span>
+	</li>
+
+	<li class='active'>
+		<%= link_to "上传新照片", '#'%>
+	</li>
+</ul>
+
+<%= form_for(@photo, :url => admin_photos_path, :html => {:class => 'form-horizontal',:multipart => true}) do |f| %>
+
+  <fieldset>
+  <legend>新照片</legend>
+    <div class="control-group">
+      <label class="control-label" for="input01">名称</label>
+      <div class="controls">
+        <%= file_field_tag :file, :class => 'input-xlarge'%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">类型</label>
+      <div class="controls">
+        <%= f.select :category_id, [['艺术照', 1], ['婚纱照', 2]], :class => 'input-xlarge' %>
+      </div>
+    </div>
+    <div class='form-actions'>
+      <button class='btn btn-primary' type='submit'>保存</button>
+    </div>
+  </fieldset>
+</form>
+<% end -%>
+

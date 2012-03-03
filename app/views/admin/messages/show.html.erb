@@ -15,6 +15,14 @@
   <h1><%= @admin_message.title%><span style='margin-left: 20px;font-size: 14px;color:silver'><%="(#{@admin_message.created_at.to_s(:db)})" %></span></h1>
 </div>
 
+<div class="btn-group" style ='padding:0 0  20px 15px;'>
+  <%= link_to @admin_message,
+   :class => 'btn btn-danger',
+   :confirm => '确定要删除此消息么?', :method => :delete do %>
+   <i class='icon-trash icon-white'></i> 删除
+  <% end -%>
+</div>
+
 <div class='row'>
       <div class='span12'>
         <h2>发送人</h2>
