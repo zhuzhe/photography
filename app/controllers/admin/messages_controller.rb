@@ -1,4 +1,4 @@
-class Admin::MessagesController < ApplicationController
+class Admin::MessagesController < AdminController
     layout 'admin'
 	def index
 		@admin_messages = Admin::Message.all(:order => 'created_at DESC')

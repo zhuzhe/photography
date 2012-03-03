@@ -1,4 +1,4 @@
-class Admin::ProductionsController < ApplicationController
+class Admin::ProductionsController < AdminController
   # GET /admin/productions
   # GET /admin/productions.xml
   layout 'admin'

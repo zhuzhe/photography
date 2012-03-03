@@ -7,18 +7,16 @@ class Admin::SessionsController < ApplicationController
 	end
 
 	def create
-		@user = Admin::User.first(:conditions => {:name => params[:username], 
-			:pwd => params[:pwd]})
-		if @user
-			session[:user_id] = @user.id
-			redirect_to admin_path
+		if params[:username] != 'yuesheying' && params[:password] != 'admin@yuesheying'
+			redirect_to login_path
 		else
-			redirect_to :action => :new
+			session[:user_id] = params[:username]
+			redirect_to admin_path
 		end
-		
 	end
 
 	def destroy
-		
+		session[:user_id] = nil
+		redirect_to login_path
 	end
 end

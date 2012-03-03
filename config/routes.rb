@@ -72,6 +72,10 @@ Photography::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   match 'admin' => 'admin/welcome#index', :as => :admin
+
+  match 'admin/login' => 'admin/sessions#new', :as => :login
+  match 'admin/login_out' => 'admin/sessions#destroy', :as => :login_out
+
   root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"

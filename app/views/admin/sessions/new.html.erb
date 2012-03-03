@@ -1,5 +1,5 @@
-<% form_tag(:action => "create") do %>
-  <%= text_field_tag :name%>
-  <%= text_field_tag :pwd%>
-  <%= submit_tag 'login'%>
+<% form_tag({:action => "create"}, {:class => 'well form-inline'}) do %>
+  <%= text_field_tag :username, '',:class => 'input-small', :placeholder => '用户名'%>
+  <%= password_field_tag :password, '',:class => 'input-small', :placeholder => '密码'%>
+  <%= submit_tag '登陆'%>
 <% end -%>
