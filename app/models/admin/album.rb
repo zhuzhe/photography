@@ -1,7 +1,7 @@
 class Admin::Album < ActiveRecord::Base
 	set_table_name :albums
 
-	has_many :photos
+	has_many :photos, :order => 'created_at DESC'
 	belongs_to :cover, :class_name => 'Photo', :foreign_key => 'cover_id'
 
 	def category

@@ -79,7 +79,7 @@ $(function () {
 	}
 	$('.work li a').click(function () {
 		create_photo_container({'url': $(this).find('img').attr('src')});
-	})
+	});
 
 	// $('.work li a:first').click();
 })
