@@ -1,0 +1,38 @@
+<ul class="breadcrumb">
+<li>
+	<%= link_to "首页", admin_path %>
+	<span class="divider">/</span>
+</li>
+<li class='active'>
+	<%= link_to "相册", '#'%>
+</li>
+</ul>
+
+<div class="btn-group">
+	<%= link_to '新建相册', new_admin_album_path, :class => 'btn' %>
+</div>
+
+<table class='table table-striped'>
+	<thead>
+		<tr><th>#</th>
+				<th>名称</th>
+				<th>类型</th>
+				<th>简介</th>
+				<th>照片数</th>
+				<th>更新时间</th>
+				<th>创建时间</th></tr>
+	</thead>
+	<tbody>
+		<% @albums.each_with_index do |m, index| %>
+		    <tr>
+		    	<td><%= index + 1%></td>
+		    	<td><%= link_to m.name, m %></td>
+		    	<td><%= m.category %></td>
+    		    <td><%= m.description.truncate(10) %></td>
+		     	<td><%= m.photos.length %></td>
+		     	<th><%= m.updated_at.to_s(:db)%></th>
+		        <td><%= m.created_at.to_s(:db) %></td>
+		    </tr>
+		<% end %>
+	</tbody>
+</table>

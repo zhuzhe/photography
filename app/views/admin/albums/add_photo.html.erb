@@ -1,0 +1,59 @@
+<%= content_for :head do %>
+	<%= javascript_include_tag 'jquery-1.3.2' %>
+	<script type="text/javascript">
+		$(function () {
+			var album_id = $('#album_id').val()
+			$('.add_to_album').click(function () {
+				var $this = $(this);
+				$.post("/admin/albums/" + album_id + "/create_photo", {
+					'photo_id': $this.attr('photo_id')
+				}, function (result) {
+					$this.replaceWith('<span>已添加</span>');
+				}).error(function () {
+					aler('添加失败，请重试...');
+				});
+				return false;
+			})
+		})
+	</script>
+<% end -%>
+
+<%= hidden_field_tag :album_id, @album.id%>
+<ul class="breadcrumb">
+<li>
+	<%= link_to "首页", admin_path %>
+	<span class="divider">/</span>
+</li>
+<li>
+	<%= link_to "相册", admin_albums_path %>
+	<span class="divider">/</span>
+</li>
+<li>
+	<%= link_to @album.name, admin_album_path(@album) %>
+	<span class="divider">/</span>
+</li>
+<li class='active'>
+	<%= link_to '添加照片', '#'%>
+</li>
+</ul>
+<ul class="thumbnails">
+	<% @photos.each do |p| %>
+        <li class="span3">
+          <div class="thumbnail">
+          	<%= image_tag p.id2relative_path%>
+            <div class="caption">
+              <p>
+              	<% if @album.photos.include?(p) %>
+              	<span>已添加</span>
+              	<% else %>
+              	<a href="#" photo_id="<%= p.id %>" class="add_to_album btn btn-primary">添加</a>
+              	<% end -%>
+              </p>
+            </div>
+          </div>
+        </li>
+        <% end -%>
+ </ul>
+
+ <%= will_paginate @photos,  :class=> 'digg_pagination',:previous_label => '上一页',:next_label => '下一页'%>
+</div>

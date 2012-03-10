@@ -1,11 +1,33 @@
 Photography::Application.routes.draw do
 
+  get "albums/index"
+
+  get "albums/show"
+
+  get "albums/create"
+
+  get "albums/update"
+
+  get "albums/destroy"
+
+  resources :albums
+
   namespace :admin do resources :users end
 
   namespace :admin do resources :productions end
   namespace :admin do resource :session end   
   namespace :admin do resources :messages end
   namespace :admin do resources :photos end
+  namespace :admin do
+   resources :albums do
+      member do
+        get :add_photo
+        post :create_photo
+        post :remove_photo
+     end
+   end
+   end
+
 
   match '/admin/photos/:id/update' => 'admin/photos#update'
 

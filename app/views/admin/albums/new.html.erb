@@ -1,0 +1,14 @@
+<ul class="breadcrumb">
+<li>
+	<%= link_to "首页", admin_path %>
+	<span class="divider">/</span>
+</li>
+<li>
+	<%= link_to "相册", admin_albums_path%>
+	<span class="divider">/</span>
+</li>
+<li class='active'>
+	<%= link_to "新建相册", '#'%>
+</li>
+</ul>
+<%= render :partial => 'form'%>
