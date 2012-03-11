@@ -45,7 +45,7 @@
             <div class="caption">
               <p>
               	<% if @album.photos.include?(p) %>
-              	<span>已添加</span>
+              	<span>已添加到相册《<%= p.album.name%>》</span>
               	<% else %>
               	<a href="#" photo_id="<%= p.id %>" class="add_to_album btn btn-primary">添加</a>
               	<% end -%>

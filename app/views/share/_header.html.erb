@@ -1,8 +1,10 @@
-<div class="header"></div>
+<div class="header">
+	<embed src='http://www.ichenbo.com/music/泰勒%20斯威夫特-Love%20Story%20%20.mp3' width='0' height='0' loop="true" autostart="true">
+</div>
 <div class="nav">
 	<ul>
 		<li>   
-			<%=link_to	'首页', root_path%>
+			<%=link_to	'首页', root_path, :class =>  is_active?(:controller => 'welcome', :action => 'index')%>
 	    </li>
 		<li>
 			<%=link_to '品牌理念', brand_path%>

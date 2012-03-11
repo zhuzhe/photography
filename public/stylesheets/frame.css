@@ -18,7 +18,7 @@ p{
 
 body{
 	font-size:12px;
-	background:url(../images/bg.gif);
+	background:url(/images/bg.gif);
 	margin:0px;
 }
 #wrap{
@@ -29,22 +29,19 @@ body{
 #wrap .header{
 	width:1024px;
 	height:118px;
-	background:url(../images/top.gif) no-repeat;
+	background:url(/images/top.gif) no-repeat;
 }
 #wrap .nav{
 	width:1024px;
 	height:52px;
-	background:url(../images/nav_bg.gif) no-repeat;
+	background:url(/images/nav_bg.gif) no-repeat;
 }
+
 #wrap .nav .span{
 	padding:17px 0px 0px;
 	height:17px;
 }
 #wrap .nav .span a{
-	background:none;
-	height:17px;
-}
-#wrap .nav .span a:hover{
 	background:none;
 	height:17px;
 }

@@ -1,4 +1,6 @@
 class Photo < ActiveRecord::Base     
+
+    belongs_to :album
     
     ROOT_DIR = Rails.root.join('public', 'images', 'photos')
 
