@@ -7,25 +7,25 @@
 			<%=link_to	'首页', root_path, :class =>  is_active?(:controller => 'welcome', :action => 'index')%>
 	    </li>
 		<li>
-			<%=link_to '品牌理念', brand_path%>
+			<%=link_to '品牌理念', brand_path, :class => is_active?(:controller => 'welcome', :action => 'brand')%>
 		</li>
 		<li>
-			<%=link_to '经典作品', photos_path%>
+			<%=link_to '经典作品', photos_path, :class => is_active?(:controller => 'photos', :action => 'index')%>
 		</li>   
 		<li>
-			<%=link_to '婚照套餐', weddings_path%>
+			<%=link_to '婚照套餐', weddings_path, :class => is_active?(:controller => 'weddings', :action => 'index')%>
 		</li>     
 		 <li>
-			<%=link_to '艺术写真', arts_path%>
+			<%=link_to '艺术写真', arts_path, :class => is_active?(:controller => 'arts', :action => 'index')%>
 		 </li>         
 		 <li>
-			<%=link_to '团队介绍', team_path%>
+			<%=link_to '团队介绍', team_path, :class => is_active?(:controller => 'welcome', :action => 'team')%>
 		 </li>       
 		<li>
-			<%=link_to '联系我们', contact_path%>      
+			<%=link_to '联系我们', contact_path, :class => is_active?(:controller => 'welcome', :action => 'contact')%>      
 		</li>   
 		<li>
-			<%=link_to '在线留言', messages_path%>      
+			<%=link_to '在线留言', messages_path, :class => is_active?(:controller => 'messages', :action => 'index')%>      
 		</li>
 	</ul>
 </div>
