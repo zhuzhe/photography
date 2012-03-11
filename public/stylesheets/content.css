@@ -57,12 +57,50 @@ h2,h3,h4{
 	padding:3px 101px;
 }
 #wrap .content .works{
-	background:url(../images/content/works.gif) no-repeat;
 	width:1024px;
-	height:652px;
-	padding-top:55px;
+	height:100%;
+	padding-top:25px;
 	margin-top:20px;
 }
+#wrap .content .works ul{
+	background:url(/images/content/yue_works_bg.gif) repeat-y;
+	width:1024px;
+	height:100%;
+	overflow:hidden;
+	margin:0px auto;
+	padding:8px 28px;
+}
+#wrap .content .works ul li{
+	float:left;
+	width:242px;
+}
+#wrap .content .works ul li a{
+	float:left;
+	background:#B0A999;
+	padding:3px;
+	margin:8px;
+	color:#FFF;
+	width:219px;
+}
+#wrap .content .works ul li a:hover{
+	background:#6E0200;
+}
+#wrap .content .works ul li a span{
+	float:left;
+	padding-top:4px;
+	padding-left:5px;
+	line-height:14px;
+}
+#wrap .content .works ul li img{
+	border:1px solid #D3C6B0;
+	width:219px;
+	height:146px;
+}
+#wrap .content .works ul li .text{
+	width:163px;
+	height:18px;
+	padding:3px 0px 0px 5px;
+} 
 #wrap .content .left{
 	width:180px;
 	height:100%;

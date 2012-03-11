@@ -11,18 +11,21 @@
 <% end -%>
 <div class="content">
 		<div class="left">
-			<h2><img src="images/content/wedding_title.gif" /></h2>
+			<h2><img src="images/content/classics.gif" /></h2>
 			<ul>
-				<li><a>写真套系</a></li>
-				<li><a>经典婚纱</a></li>
-				<li><a>客套经典</a></li>   
+				<% @albums.each do |album| %>
+					<li>
+						<%= link_to album.name, photos_path(:album_id => album.id) %>
+					</li>
+				<% end -%>
+
 			</ul>
 			<img src="images/content/service.gif" />
 			<img src="images/pic/ad_01.jpg" />
 			<img src="images/pic/contact.jpg" />
 		</div>
 		<div class="right">
-			<h3> 经典</h3>
+			<h3> <%= @album ? @album.name : '' %> </h3>
 			<div class="work">
 				<ul>     
 					<% @photos.each do |p|%>

@@ -22,42 +22,20 @@
   				</UL>
 			</DIV>
 		</div>
-		<div class="works">
-			<div id="page">
-			<div id="container">
-
-				<!-- Start Advanced Gallery Html Containers -->
-				<div id="gallery" class="pic">
-					<div id="controls" class="controls"></div>
-					<div class="slideshow-container">
-						<div id="loading" class="loader"></div>
-						<div id="slideshow" class="slideshow" style='overflow: hidden'></div>
-						<div id="caption" class="caption-container"></div>
-					</div>
-					<div id="captionToggle">
-						<a href="#toggleCaption" class="off" title="Show Caption">Show Caption</a>
-					</div>
+				<div class="works">
+		        	<div><img src="images/content/yue_works_top.gif" /></div>
+					<ul>
+						<% @albums.each do |album| %>
+							<li>
+								<%= link_to photos_path(:album_id => album.id) do %>
+									<%= image_tag album.cover%>
+									<span>
+										<%= album.description%>
+									</span>
+									<% end -%>
+								</li>
+						<% end -%>
+		            </ul>
+		            <div><img src="images/content/yue_works_bottom.gif" /></div>
 				</div>
-				<div id="thumbs" class="navigation">
-					<ul class="thumbs noscript"> 
-						<% @photos.each_with_index	do |p, index| %>          
-						 <li>
-							<a class="thumb" name="<%=index%>" href="<%= p.id2relative_path%>" title="Title #<%= index%>"> 
-								<%= image_tag p.id2relative_path%>   
-							</a>
-							<div class="caption">
-								<div class="image-title">Title #<%= index%></div>
-								<div class="image-desc">Description</div>
-							</div>
-						</li> 
-					    <% end %>     
-						
-					</ul>
-				</div>
-				<!-- End Advanced Gallery Html Containers -->
-
-				<div style="clear: both;"></div>
-			</div>
 		</div>
-		</div>
-	</div>

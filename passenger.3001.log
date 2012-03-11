@@ -1,1 +1,0 @@
-2012/03/03 18:47:05 [error] 3506#0: *4 "/Users/zhuzhe/Documents/photography/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"

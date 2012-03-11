@@ -2,7 +2,13 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-    @photos = Photo.paginate(:page => params[:page], :per_page => 16)
+    @albums = Album.all
+    @album = Album.find_by_id(params[:album_id]) || Album.first
+    if @album
+      @photos = @album.photos.paginate(:page => params[:page], :per_page => 16)
+    else
+      @photos = Photo.paginate(:page => params[:page], :per_page => 16)
+    end
   end
 
   # GET /photos/1
