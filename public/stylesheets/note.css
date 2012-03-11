@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+
+h2,h3,h4{
+	margin:0px;
+	padding:0px;
+}
+
+ul{
+	margin:0px;
+	padding:0px;
+}
+li{list-style:none;
+}
+a{
+	cursor:pointer;
+	text-decoration:none;
+}
+p{
+	margin:0px;
+	padding:0px;
+}
+img{
+	border:0;
+}
+
+#wrap .content .titles{
+	margin:0 auto;
+	width:168px;
+	height:24px;
+	font-size:24px;
+	font-weight:bold;
+	padding-top:60px;
+}
+#wrap .content .dashed{
+	text-indent:0;
+}
+#wrap .content .right .main .tip{
+	padding:0px;
+	float:left;
+}
+#wrap .content .right .main .tip li{
+	color:#83682d;
+	font-size:14px;
+	line-height:24px;
+	text-indent:2em;
+	margin:5px 0px;
+	width:738px;
+}
+#wrap .content ul .height{
+	padding:5px 0px 30px;
+}
+#wrap .content ul .more{
+	font-size:16px;
+	font-weight:bold;
+	color:#8b0000;
+}
+#wrap .content ul .problem{
+	color:#8b0000;
+	font-weight:bold;
+	padding-top:20px;
+}
