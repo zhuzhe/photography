@@ -11,15 +11,26 @@
 	<%= link_to '添加新产品', new_admin_production_path, :class => 'btn' %>
 </div>
 
-
-<ul class="nav nav-list">
-	<li class="nav-header">
-	  产品列表
-	</li>
-	<% @admin_productions.each do |admin_production| %>
-	    <li><%= link_to admin_production.name, admin_production %> </li>
-	<% end %>
-</ul>
+<table class='table table-striped'>
+	<thead>
+		<tr><th>#</th>
+				<th>名称</th>
+				<th>类型</th>
+				<th>更新时间</th>
+				<th>创建时间</th></tr>
+	</thead>
+	<tbody>
+		<% @admin_productions.each_with_index do |m, index| %>
+		    <tr>
+		    	<td><%= index + 1%></td>
+		    	<td><%= link_to m.name, m %></td>
+		    	<td><%= m.category_text %></td>
+		     	<th><%= m.updated_at.to_s(:db)%></th>
+		        <td><%= m.created_at.to_s(:db) %></td>
+		    </tr>
+		<% end %>
+	</tbody>
+</table>
 
 
 
