@@ -8,9 +8,9 @@ class Admin::Production < ActiveRecord::Base
 
     def category_text
     	case self.category
-    	when 1
+    	when 2
     		 then  "婚纱照"
-        when 2
+        when 1
     	     then  "艺术照"	
     	end
     end
