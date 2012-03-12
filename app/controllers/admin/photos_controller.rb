@@ -30,6 +30,7 @@ class Admin::PhotosController < AdminController
       file.write(uploaded_io.read)
     end
     @photo.create_image
+    @photo.create_thumb
     if @photo.admin_album
       redirect_to @photo.admin_album
     else
