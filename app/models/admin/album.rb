@@ -12,4 +12,10 @@ class Admin::Album < ActiveRecord::Base
 		   then  "艺术照"  
 		end
 	end
+
+	DEFAULT_COVER = '/images/default_album_cover'
+
+	def get_cover
+	   self.cover && self.cover.id2relative_path || self.photos.first && self.photos.first.id2relative_path || DEFAULT_COVER
+	end
 end

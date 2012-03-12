@@ -29,7 +29,7 @@
 			<div class="work">
 				<ul>     
 					<% @photos.each do |p|%>
-						<li><a class='lightbox' href='<%= p.id2relative_path%>'><img src="<%= p.id2relative_path%>" width='168' height='112'/></a></li> 
+						<li><a class='lightbox' href='<%= p.id2relative_path%>' style='overflow:hidden;display:block'><img src="<%= p.id2thumb_relative_path%>" /></a></li> 
 					<% end %>  
 				</ul>
 			

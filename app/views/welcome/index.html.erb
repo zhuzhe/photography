@@ -23,12 +23,12 @@
 			</DIV>
 		</div>
 				<div class="works">
-		        	<div><img src="images/content/yue_works_top.gif" /></div>
+		        	<div><img src="images/content/yue_works_top.gif" style='display:block'/></div>
 					<ul>
 						<% @albums.each do |album| %>
 							<li>
 								<%= link_to photos_path(:album_id => album.id) do %>
-									<%= image_tag album.cover%>
+									<%= image_tag album.get_cover%>
 									<span>
 										<%= album.name%>
 									</span>
@@ -36,6 +36,6 @@
 								</li>
 						<% end -%>
 		            </ul>
-		            <div><img src="images/content/yue_works_bottom.gif" /></div>
+		            <div><img src="images/content/yue_works_bottom.gif" style='display:block'/></div>
 				</div>
 		</div>

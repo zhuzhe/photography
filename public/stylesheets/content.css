@@ -116,14 +116,14 @@ h2,h3,h4{
 	line-height:28px;
 	margin:0 auto;
 	height:28px;
-	width:176px;
-	color:#565656;
+	width:176px;	
 	border-bottom:#b65353 dashed 1px;
 }
 #wrap .content .left ul li a{
 	background:url(../images/content/left_a.gif) no-repeat;
 	padding-left:40px;
 	float:left;
+	color:#565656;
 }
 #wrap .content .left ul li a:hover{
 	background:url(../images/content/left_hover.gif) no-repeat;
@@ -304,11 +304,15 @@ h2,h3,h4{
 	float:left;
 	text-align:center;
 }
+
+#wrap .content .right .work ul li img {
+	border: 0;
+}
 #wrap .content .right .work ul li a{
 	display:block;
 	background:url(../images/works/bg.jpg) no-repeat;
-	width:168px;
-	height:112px;
+	width: 219px;
+	height: 146px;
 	padding:1px;
 	margin:12px;
 	border:#c0b395 1px solid;

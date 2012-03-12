@@ -19,6 +19,7 @@ Photography::Application.routes.draw do
         get :add_photo
         post :create_photo
         post :remove_photo
+        post :set_cover
      end
 
      resources :photos

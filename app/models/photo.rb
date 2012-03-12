@@ -6,6 +6,7 @@ class Photo < ActiveRecord::Base
     scope :no_album, where(:album_id => nil)
     
     ROOT_DIR = Rails.root.join('public', 'images', 'photos')
+    THUMB_DIR = Rails.root.join('public', 'images', 'thumbs')
 
     after_destroy do |p|
       if File.exist? p.id2path
@@ -28,6 +29,14 @@ class Photo < ActiveRecord::Base
     
     def id2relative_path
       "/images/photos/" + self.id.to_s.rjust(9, '0').scan(/\d{3}/).join('/')  + '.jpg'
+    end
+
+    def id2thumb_path
+      self.id2(THUMB_DIR) + '.jpg'
+    end
+
+    def id2thumb_relative_path
+      "/images/thumbs/" + self.id.to_s.rjust(9, '0').scan(/\d{3}/).join('/')  + '.jpg'
     end
          
     def id2 root
@@ -59,5 +68,12 @@ class Photo < ActiveRecord::Base
       image = MiniMagick::Image.open(self.id2path)
       image.resize "560x560"
       image.write self.id2path
+    end
+
+    def create_thumb
+      return unless File.exist?(self.id2path)
+      image = MiniMagick::Image.open(self.id2path)
+      image.resize "219x146"
+      image.write self.id2thumb_path
     end
 end

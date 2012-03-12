@@ -20,7 +20,7 @@ class Admin::AlbumsController < AdminController
   end
 
   def create
-    @album = Admin::Album.create(params[:admin_album].merge(:cover => Photo.first))
+    @album = Admin::Album.create(params[:admin_album])
     redirect_to @album
   end
 
@@ -53,6 +53,14 @@ class Admin::AlbumsController < AdminController
     @album = Admin::Album.find(params[:id])
     @photo = Photo.find(params[:photo_id])
     @album.photos.delete @photo
+    render :json => {:status => :success}
+  end
+
+  def set_cover
+    @album = Admin::Album.find(params[:id])
+    @photo = Photo.find(params[:photo_id])
+    @album.cover = @photo
+    @album.save
     render :json => {:status => :success}
   end
 

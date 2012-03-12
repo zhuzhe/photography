@@ -50,5 +50,13 @@ namespace :photo do
                 puts f.to_s
             end
     end
+
+    desc "convert to thumb"
+    task :convert_to_thumb => :environment do
+        Photo.find_each do |photo|
+            photo.create_thumb
+            puts photo.id2thumb_path
+        end
+    end
 end
 
