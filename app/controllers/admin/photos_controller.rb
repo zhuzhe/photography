@@ -15,7 +15,12 @@ class Admin::PhotosController < AdminController
   end
 
   def new
+    @album = Admin::Album.find(params[:album_id])
     @photo= Photo.new
+  end
+
+  def no_album
+    @photo = Photo.new
   end
 
   def create
@@ -25,7 +30,11 @@ class Admin::PhotosController < AdminController
       file.write(uploaded_io.read)
     end
     @photo.create_image
-    redirect_to edit_admin_photo_path(@photo)
+    if @photo.admin_album
+      redirect_to @photo.admin_album
+    else
+      redirect_to admin_photo_path(@photo)
+    end 
   end
 
   def update

@@ -1,15 +1,5 @@
 Photography::Application.routes.draw do
 
-  get "albums/index"
-
-  get "albums/show"
-
-  get "albums/create"
-
-  get "albums/update"
-
-  get "albums/destroy"
-
   resources :albums
 
   namespace :admin do resources :users end
@@ -17,7 +7,12 @@ Photography::Application.routes.draw do
   namespace :admin do resources :productions end
   namespace :admin do resource :session end   
   namespace :admin do resources :messages end
-  namespace :admin do resources :photos end
+  namespace :admin do resources :photos do
+      new do
+       get :no_album
+     end
+    end
+  end
   namespace :admin do
    resources :albums do
       member do
@@ -25,6 +20,8 @@ Photography::Application.routes.draw do
         post :create_photo
         post :remove_photo
      end
+
+     resources :photos
    end
    end
 

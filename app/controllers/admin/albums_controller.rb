@@ -38,7 +38,7 @@ class Admin::AlbumsController < AdminController
 
   def add_photo
     @album = Admin::Album.find(params[:id])
-    @photos = Photo.paginate(:per_page => 20, :page => params[:page]).order('created_at DESC')
+    @photos = Photo.no_album.paginate(:per_page => 20, :page => params[:page]).order('created_at DESC')
   end
 
   def create_photo

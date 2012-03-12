@@ -34,7 +34,7 @@
 		<span class="divider">/</span>
 	</li>
 	<li>
-		<%= link_to "相册", admin_photos_path%>
+		<%= link_to "照片", admin_photos_path%>
 		<span class="divider">/</span>
 	</li>
 	<li class='active'>
@@ -43,16 +43,9 @@
 </ul>
 
 <div class='page-header'>
-	<div class="btn-group">
-	  <%= link_to new_admin_photo_path, 
-	  :class => 'btn btn-primary' do %>
-	    <i class='icon-pencil icon-white'></i> 上传新照片
-	  <% end -%>
-	</div>
 	<%= hidden_field_tag :photo_id, @photo.id %>
-  <h1 style='margin: 10px 0'>照片编号： <%= "#{@photo.id}" %>   类型： <span id='category'><%= @photo.category_text%></span>
+  <h1 style='margin: 10px 0'>照片编号： <%= "#{@photo.id}" %>
   </h1>
-
 </div>
 <div class='btn-toolbar'>
 	<div class="btn-group">
@@ -64,12 +57,6 @@
 		   <i class='icon-trash icon-white'></i> 删除
 		  <% end -%>
 		<% end -%>
-	  
-	</div>
-
-	<div class="btn-group" data-toggle="buttons-radio">
-	  <button class="btn photo-type" data-category='1'>婚纱</button>
-	  <button class="btn photo-type" data-category='2'>艺术写真</button>
 	</div>
 </div>
 

@@ -1,9 +1,17 @@
 class Photo < ActiveRecord::Base     
 
     belongs_to :album
+    belongs_to :admin_album, :class_name => 'Admin::Album', :foreign_key => 'album_id'
+
+    scope :no_album, where(:album_id => nil)
     
     ROOT_DIR = Rails.root.join('public', 'images', 'photos')
 
+    after_destroy do |p|
+      if File.exist? p.id2path
+        File.delete p.id2path
+      end
+    end
 
     def category_text
       case self.category_id

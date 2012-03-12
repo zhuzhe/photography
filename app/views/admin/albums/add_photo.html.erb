@@ -30,7 +30,7 @@
 	<span class="divider">/</span>
 </li>
 <li>
-	<%= link_to @album.name, admin_album_path(@album) %>
+	<%= link_to @album.name, @album %>
 	<span class="divider">/</span>
 </li>
 <li class='active'>
@@ -41,7 +41,9 @@
 	<% @photos.each do |p| %>
         <li class="span3">
           <div class="thumbnail">
-          	<%= image_tag p.id2relative_path%>
+          	<%= link_to admin_photo_path(p) do %>
+          		<%= image_tag p.id2relative_path%>
+          	<% end -%>
             <div class="caption">
               <p>
               	<% if @album.photos.include?(p) %>

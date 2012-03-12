@@ -51,6 +51,7 @@
   :class => 'btn btn-primary' do %>
     <i class='icon-pencil icon-white'></i> 编辑
   <% end -%>
+  <%= link_to '上传照片', new_admin_photo_path(:album_id => @album), :class => 'btn' %>
   <%= link_to add_photo_admin_album_path(@album), 
   :class => 'btn btn-primary' do %>
     <i class='icon-pencil icon-white'></i> 添加照片
@@ -68,7 +69,9 @@
   <% @photos.each do |p| %>
         <li class="span3">
           <div class="thumbnail">
-            <%= image_tag p.id2relative_path%>
+            <%= link_to admin_photo_path(p) do %>
+              <%= image_tag p.id2relative_path%>
+            <% end -%>
             <div class="caption">
               <p>
                 <%= form_tag remove_photo_admin_album_path(@album) do%>

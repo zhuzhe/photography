@@ -4,22 +4,17 @@
 		<span class="divider">/</span>
 	</li>
 	<li>
-		<%= link_to "相册", admin_photos_path%>
+		<%= link_to "照片", admin_photos_path%>
 		<span class="divider">/</span>
 	</li>
-  <li>
-    <%= link_to @album.name, @album%>
-    <span class="divider">/</span>
-  </li>
 	<li class='active'>
 		<%= link_to "上传新照片", '#'%>
 	</li>
 </ul>
 <div class='page-header'>
-  <h1><%= link_to @album.name, @album%></h1>
+  <h1>上传到照片库</h1>
 </div>
 <%= form_for(@photo, :url => admin_photos_path, :html => {:class => 'form-horizontal',:multipart => true}) do |f| %>
-  <%= hidden_field_tag 'photo[album_id]', @album.id %>
   <fieldset>
   <legend>新照片</legend>
     <div class="control-group">
