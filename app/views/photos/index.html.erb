@@ -1,5 +1,6 @@
 <%= content_for :head do %>
-	<%#= javascript_include_tag 'jquery.photo' %>
+	<title>越摄影 - 经典作品</title>
+	<meta content='为打造大理第一高端婚纱摄影工作室而诞生，我们本着为客户提供高质量的精美艺术照片和百分百的亲情服务为宗旨，不断的完善自己的技术和服务内容、推陈出新，在保持自己的独特风格的基础上，满足顾客不同的审美需求，顾客的满意是我们全员工为之奋斗的目标！' name='description'>
 	<%= stylesheet_link_tag 'digg.pagination' %>
 	<%= stylesheet_link_tag 'jquery.lightbox-0.5', :media => "screen" %>
 	<%= javascript_include_tag 'jquery.lightbox-0.5.min' %>
@@ -15,7 +16,7 @@
 			<ul>
 				<% @albums.each do |album| %>
 					<li>
-						<%= link_to album.name, photos_path(:album_id => album.id) %>
+						<%= link_to album.name.truncate(13), photos_path(:album_id => album.id) %>
 					</li>
 				<% end -%>
 

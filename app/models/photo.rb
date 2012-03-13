@@ -12,6 +12,10 @@ class Photo < ActiveRecord::Base
       if File.exist? p.id2path
         File.delete p.id2path
       end
+
+      if File.exist? p.id2thumb_path
+        File.delete p.id2thumb_path
+      end
     end
 
     def category_text

@@ -3,4 +3,6 @@ db/*.sqlite3
 log/*.log
 tmp/
 public/image/photos
-public/image/thumbs
+public/image/thumbs/
+public/images/thumbs
+public/images/thumbs/*
