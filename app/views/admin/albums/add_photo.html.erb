@@ -1,5 +1,6 @@
 <%= content_for :head do %>
 	<%= javascript_include_tag 'jquery-1.3.2' %>
+	<%= javascript_include_tag 'jquery.masonry.min' %>
 	<script type="text/javascript">
 		$(function () {
 			$.ajaxSetup({beforeSend:function(a){a.setRequestHeader("X-CSRF-Token",$('meta[name="csrf-token"]').attr("content"))}});
@@ -14,7 +15,14 @@
 					aler('添加失败，请重试...');
 				});
 				return false;
-			})
+			});
+
+			var $waterfall = $('#waterfall');
+			$waterfall.imagesLoaded(function () {
+			    $waterfall.masonry({
+			      itemSelector: '.item'
+			    })
+			});
 		})
 	</script>
 <% end -%>
@@ -37,9 +45,9 @@
 	<%= link_to '添加照片', '#'%>
 </li>
 </ul>
-<ul class="thumbnails">
+<ul id='waterfall' class="thumbnails">
 	<% @photos.each do |p| %>
-        <li class="span3">
+        <li class="span3 item">
           <div class="thumbnail">
           	<%= link_to admin_photo_path(p) do %>
           		<%= image_tag p.id2relative_path%>
