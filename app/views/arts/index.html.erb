@@ -28,40 +28,64 @@
 			</div>
 			<div class="main">
 				<img src="images/content/introduction.gif" />
-				<ul>
+				<div>
 					<h4>拍摄服装：</h4>
-					<li><%= @production.clothing%></li>
-				</ul>
-				<ul>
+					<ul>
+						<li><%= @production.clothing%></li>
+					</ul>
+				</div>
+				<div>
 					<h4>化妆造型：</h4>
-					<li><%= @production.makeup%></li>
-				</ul>
-				<ul>
+					<ul>
+						<li><%= @production.makeup%></li>
+					</ul>
+				</div>
+				
+				<div>
 					<h4>拍摄场景：</h4>
-					<li><%= @production.place%></li>
-				</ul>
-				<ul>
+					<ul>
+						<li><%= @production.place%></li>
+					</ul>
+				</div>
+
+				<div>
 					<h4>拍摄时间：</h4>
-					<li><%= @production.time%></li>
-				</ul>
-				<ul>
+					<ul>
+						<li><%= @production.time%></li>
+					</ul>
+				</div>
+				
+				<div>
 					<h4>特色服务：</h4>
-					<li><%= @production.service%></li>
-				</ul>
-				<ul>
+					<ul>
+						<li><%= @production.service%></li>
+					</ul>
+				</div>
+				
+				<div>
 					<h4>所拍照片：</h4>
-					<li><%= @production.photos%></li>
-				</ul>
-				<ul>
+					<ul>
+						<li><%= @production.photos%></li>
+					</ul>
+				</div>
+				
+				<div>
 					<h4>产品赠送：</h4>
-					<li>
-						<%= @production.gift%>
-					</li>
-				</ul>
-				<ul>
+					<ul>
+						<% @production.gift.strip.split(' ').each do |item|%>
+							<li>
+								<%= item %>
+							</li>
+						<% end -%>
+					</ul>
+				</div>
+				
+				<div>
 					<h4 class="tips">温馨提示：</h4>
-					<li><%= @production.tip%></li>
-				</ul> 
+					<ul>
+						<li><%= @production.tip%></li>
+					</ul> 
+				</div>
 			</div>
 			<% end %>
 		</div>

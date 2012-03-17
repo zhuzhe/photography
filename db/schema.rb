@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315144150) do
+ActiveRecord::Schema.define(:version => 20120317041257) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -50,17 +50,17 @@ ActiveRecord::Schema.define(:version => 20120315144150) do
   create_table "productions", :force => true do |t|
     t.string   "name"
     t.integer  "category"
-    t.string   "content"
+    t.string   "content",    :limit => 1000
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "clothing"
-    t.string   "makeup"
-    t.string   "place"
-    t.string   "service"
-    t.string   "photos"
-    t.string   "gift"
-    t.string   "tip"
-    t.string   "time"
+    t.string   "clothing",   :limit => 1000
+    t.string   "makeup",     :limit => 1000
+    t.string   "place",      :limit => 1000
+    t.string   "service",    :limit => 1000
+    t.string   "photos",     :limit => 1000
+    t.string   "gift",       :limit => 1000
+    t.string   "tip",        :limit => 1000
+    t.string   "time",       :limit => 1000
   end
 
   create_table "users", :force => true do |t|

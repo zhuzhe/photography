@@ -70,7 +70,9 @@
 <div class='row'>
       <div class='span12'>
         <h2>赠品</h2>
-        <p><%= @admin_production.gift %></p>
+        <% @admin_production.gift.strip.split(' ').each do |item|%>
+          <p><%= item %></p>
+        <% end -%>
       </div>
 </div>
 <div class='row'>
