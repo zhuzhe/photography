@@ -2,7 +2,16 @@ Photography::Application.routes.draw do
 
   resources :albums
 
-  namespace :admin do resources :users end
+  namespace :admin do
+   resources :users do
+    collection do
+      get :change_pwd
+    end
+    member do
+      post :update_pwd
+    end
+   end
+ end
 
   namespace :admin do resources :productions end
   namespace :admin do resource :session end   

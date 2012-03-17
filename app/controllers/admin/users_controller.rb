@@ -80,4 +80,14 @@ class Admin::UsersController < AdminController
       format.xml  { head :ok }
     end
   end
+
+  def change_pwd
+    @user = Admin::User.admin
+  end
+
+  def update_pwd
+    @user = Admin::User.find(params[:id])
+    @user.update_attribute(:pwd, params[:pwd])
+    redirect_to change_pwd_user_path(@user)
+  end
 end

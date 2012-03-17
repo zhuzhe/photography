@@ -1,0 +1,26 @@
+<%= form_tag update_pwd_admin_user_path(@user), {:class => 'form-horizontal'} do %>
+  <fieldset>
+    <legend>修改密码</legend>
+    <div class="control-group">
+      <label class="control-label" for="input01">旧密码</label>
+      <div class="controls">
+        <%= text_field_tag :old_pwd, nil, :class => 'input-xlarge'%>      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">新密码</label>
+      <div class="controls">
+        <%= text_field_tag :pwd, nil, :class => 'input-xlarge'%>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">重复新密码</label>
+      <div class="controls">
+        <%= text_field_tag :pwd_confirmation, nil, :class => 'input-xlarge'%>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">保存</button>
+    </div>
+  </fieldset>
+
+<% end -%>
