@@ -1,21 +1,28 @@
 <%= form_tag update_pwd_admin_user_path(@user), {:class => 'form-horizontal'} do %>
+<h3 style='color:green;padding-left: 160px'>
+  <%= flash[:notice] %>
+</h3>
   <fieldset>
     <legend>修改密码</legend>
-    <div class="control-group">
+    <div class="control-group <%= flash[:errors][:error_pwd] ? ' error' : '' if flash[:errors]%>">
       <label class="control-label" for="input01">旧密码</label>
       <div class="controls">
-        <%= text_field_tag :old_pwd, nil, :class => 'input-xlarge'%>      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="input01">新密码</label>
-      <div class="controls">
-        <%= text_field_tag :pwd, nil, :class => 'input-xlarge'%>
+          <%= password_field_tag :old_pwd, nil, :class => 'input-xlarge'%>    
+          <span class="help-inline"><%= flash[:errors][:error_pwd] if flash[:errors] %></span>
       </div>
     </div>
-    <div class="control-group">
+    <div class="control-group <%= flash[:errors][:pwd] ? 'error' : '' if flash[:errors]%>">
+      <label class="control-label" for="input01">新密码</label>
+      <div class="controls">
+        <%= password_field_tag :pwd, nil, :class => 'input-xlarge'%>
+        <span class="help-inline"><%= flash[:errors][:pwd].join(',') if  flash[:errors] && flash[:errors][:pwd] %></span>
+      </div>
+    </div>
+    <div class="control-group  <%= flash[:errors][:pwd_confirmation] ? 'error' : '' if flash[:errors]%>">
       <label class="control-label" for="input01">重复新密码</label>
       <div class="controls">
-        <%= text_field_tag :pwd_confirmation, nil, :class => 'input-xlarge'%>
+        <%= password_field_tag :pwd_confirmation, nil, :class => 'input-xlarge'%>
+        <span class="help-inline"><%= flash[:errors][:pwd_confirmation] if flash[:errors] %></span>
       </div>
     </div>
     <div class="form-actions">

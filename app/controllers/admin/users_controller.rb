@@ -87,7 +87,16 @@ class Admin::UsersController < AdminController
 
   def update_pwd
     @user = Admin::User.find(params[:id])
-    @user.update_attribute(:pwd, params[:pwd])
-    redirect_to change_pwd_user_path(@user)
+    flash[:errors] = {}
+    if @user.pwd != params[:old_pwd].strip
+      flash[:errors][:error_pwd] ='原密码不正确'
+      redirect_to :back and return
+    end
+    unless @user.update_attributes(:pwd => params[:pwd], :pwd_confirmation => params[:pwd_confirmation])
+      flash[:errors] = flash[:errors].merge(@user.errors) 
+    else
+      flash[:notice] = '修改密码成功！'
+    end
+    redirect_to :back
   end
 end
