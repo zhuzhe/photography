@@ -9,7 +9,7 @@
 			<ul> 
 				<% @productions.each do |p| %>
 				  <li>                 
-					<%= link_to p.name, arts_path(:production_id => p.id) %>
+					<%= link_to p.name.truncate(11), arts_path(:production_id => p.id) %>
 				  </li>
 				<% end %>   
 			</ul>

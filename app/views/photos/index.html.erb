@@ -16,7 +16,7 @@
 			<ul>
 				<% @albums.each do |album| %>
 					<li>
-						<%= link_to album.name.truncate(13), photos_path(:album_id => album.id) %>
+						<%= link_to album.name.truncate(11), photos_path(:album_id => album.id) %>
 					</li>
 				<% end -%>
 
