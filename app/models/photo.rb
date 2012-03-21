@@ -70,7 +70,11 @@ class Photo < ActiveRecord::Base
 
     def create_image
       image = MiniMagick::Image.open(self.id2path)
-      image.resize "730x487"
+      if image[:width] >= image[:height]
+        image.resize "730x487"
+      else
+        image.resize "338x538"
+      end
       image.write self.id2path
     end
 
