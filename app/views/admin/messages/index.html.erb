@@ -22,7 +22,7 @@
 		<% @admin_messages.each_with_index do |m, index| %>
 		    <tr>
 		    	<td><%= index + 1%></td>
-		    	<td><%= link_to m.title || '没主题', m %></td>
+		    	<td><%= link_to m.get_title, m %></td>
     		    <td><%= m.phone %></td>
 		     	<td><%= m.qq %></td>
 		     	<th><%= m.email%></th>
