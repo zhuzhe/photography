@@ -73,7 +73,7 @@ class Photo < ActiveRecord::Base
       if image[:width] >= image[:height]
         image.resize "730x487"
       else
-        image.resize "338x538"
+        image.resize "540x750"
       end
       image.write self.id2path
     end
